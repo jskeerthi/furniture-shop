@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Products - Kirubss Furniture</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Our Furniture Products</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="product-grid">
+
+    <!-- Product 1 -->
+    <div class="product">
+      <img src="images/sofa1.jpg" alt="Modern Sofa">
+      <h3>Modern Sofa</h3>
+      <p>₹12,000</p>
+      <button onclick="addToCart('Modern Sofa', 12000)">Add to Cart</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product">
+      <img src="images/table1.jpg" alt="Dining Table">
+      <h3>Dining Table</h3>
+      <p>₹8,500</p>
+      <button onclick="addToCart('Dining Table', 8500)">Add to Cart</button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product">
+      <img src="images/chair1.jpg" alt="Classic Chair">
+      <h3>Classic Chair</h3>
+      <p>₹2,000</p>
+      <button onclick="addToCart('Classic Chair', 2000)">Add to Cart</button>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2025 Kirubss Furniture. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cart - Kirubss Furniture</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Your Shopping Cart</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="cart-section">
+    <table id="cart-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Price (₹)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Cart items will be added here using JS -->
+      </tbody>
+    </table>
+    <h3 id="total-price">Total: ₹50</h3>
+  </section>
+
+  <footer>
+    <p>© 2025 Kirubss Furniture. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    let tableBody = document.querySelector("#cart-table tbody");
+    let total = 0;
+
+    cartItems.forEach(item => {
+      let row = document.createElement("tr");
+
+      let nameCell = document.createElement("td");
+      nameCell.textContent = item.name;
+
+      let priceCell = document.createElement("td");
+      priceCell.textContent = item.price;
+
+      row.appendChild(nameCell);
+      row.appendChild(priceCell);
+      tableBody.appendChild(row);
+
+      total += item.price;
+    });
+
+    document.getElementById("total-price").textContent = "Total: ₹" + total;
+  </script>
+</body>
+</html>
